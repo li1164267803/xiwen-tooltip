@@ -1,0 +1,80 @@
+{
+  "name": "xiwen-tooltip",
+  "version": "1.0.16",
+  "description": "用来简单的文字提示气泡，文字溢出时，鼠标滑上展示气泡，没有溢出，不展示气泡",
+  "keywords": [
+    "tooltip",
+    "antd",
+    "element-ui",
+    "iview",
+    "cutting",
+    "溢出显示气泡"
+  ],
+  "private": false,
+  "author": "li1164267803",
+  "license": "MIT",
+  "main": "dist/xiwen-tooltip.umd.js",
+  "module": "dist/xiwen-tooltip.esm.js",
+  "unpkg": "dist/xiwen-tooltip.min.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development rollup --config build/rollup.config.es.js --watch",
+    "build": "cross-env NODE_ENV=production npm run build:browser && npm run build:es && npm run build:umd",
+    "test": "npm run test:unit",
+    "build:browser": "rollup --config build/rollup.config.browser.js",
+    "build:es": "rollup --config build/rollup.config.es.js",
+    "build:umd": "rollup --config build/rollup.config.umd.js",
+    "demo:dev": "vue-cli-service serve",
+    "demo:build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/li1164267803/xiwen-tooltip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/li1164267803/xiwen-tooltip/issues"
+  },
+  "homepage": "https://li1164267803.github.com/xiwen-tooltip",
+  "dependencies": {
+    "ant-design-vue": "^1.7.2",
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.10",
+    "@vue/cli-plugin-babel": "^4.5.9",
+    "@vue/cli-plugin-eslint": "^4.5.9",
+    "@vue/cli-plugin-unit-jest": "^4.5.9",
+    "@vue/cli-service": "^4.5.9",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-eslint": "^10.1.0",
+    "clean-css": "^4.2.3",
+    "core-js": "^3.8.1",
+    "cross-env": "^6.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "highlight.js": "^9.18.5",
+    "mockjs": "^1.1.0",
+    "node-sass": "^4.12.0",
+    "rollup": "^1.32.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-css-only": "^1.0.0",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser": "^5.3.1",
+    "rollup-plugin-vue": "^5.1.9",
+    "sass-loader": "^8.0.2",
+    "screenfull": "^5.0.2",
+    "vue-router": "^3.4.9",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
