@@ -5,5 +5,9 @@ module.exports = {
         'modules': false
       }
     ]
+    // [
+    //   'import',
+    //   { 'libraryName': 'ant-design-vue', 'libraryDirectory': 'es', 'style': false }
+    // ]
   ]
 }

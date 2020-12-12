@@ -1,0 +1,14 @@
+.xiwen-preinstall .ant-tooltip-inner {
+  background-color: #fff;
+  color: #666;
+}
+.xiwen-preinstall .ant-tooltip-arrow::before {
+  background-color: #fff;
+}
+.xiwen-show-tips div {
+  display: block;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}

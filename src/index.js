@@ -1,5 +1,6 @@
 import Component from './lib/component.vue'
 import XiwenTooltip from './lib/tooltip-antd/index.vue'
+import 'ant-design-vue/lib/tooltip/style'
 
 const components = [
   Component,

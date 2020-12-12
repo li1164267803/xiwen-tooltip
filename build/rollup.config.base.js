@@ -6,6 +6,18 @@ import replace from 'rollup-plugin-replace'
 import css from 'rollup-plugin-css-only'
 import CleanCSS from 'clean-css'
 import json from 'rollup-plugin-json'
+import less from 'rollup-plugin-less'
+// 使rollup可以使用postCss处理样式文件less、css等
+import postcss from 'rollup-plugin-postcss'
+// 处理css定义的变量
+import simplevars from 'postcss-simple-vars'
+// 处理less嵌套样式写法
+import nested from 'postcss-nested'
+
+// 替代cssnext
+import postcssPresetEnv from 'postcss-preset-env'
+// css代码压缩
+import cssnano from 'cssnano'
 import fs from 'fs'
 
 const config = require('../package.json')
@@ -18,6 +30,17 @@ export { name, file }
 export default {
   input: 'src/index.js',
   plugins: [
+    postcss({
+      plugins: [
+        simplevars(),
+        nested(),
+        // cssnext({ warnForDuplicates: false, }),
+        postcssPresetEnv(),
+        cssnano()
+      ],
+      // 处理.css和.less文件
+      extensions: ['.css', 'less']
+    }),
     resolve(),
     // resolve({
     //   mainFields: ['module', 'jsnext:main', 'main', 'browser'],
@@ -25,6 +48,9 @@ export default {
     // }),
     vue({
       css: false
+    }),
+    less({
+      exclude: ''
     }),
     css({
       output(style) {
@@ -44,8 +70,8 @@ export default {
     json()
   ],
   // 使用rollup打包，我们在自己的库中需要使用第三方库，例如lodash等，又不想在最终生成的打包文件中出现jquery。这个时候我们就需要使用external属性。比如我们使用了lodash，
-  // external: ['moment', 'ant-design-vue'], // 如果这样配置的话，在别的项目中使用时，如果项目没有使用ant-design-vue 将没有ui效果
-  external: ['moment', 'TreeNode'],
+  external: ['moment', 'ant-design-vue'], // 如果这样配置的话，在别的项目中使用时，如果项目没有使用ant-design-vue 将没有ui效果
+  // external: ['moment'],
   watch: {
     include: 'src/**'
   }
