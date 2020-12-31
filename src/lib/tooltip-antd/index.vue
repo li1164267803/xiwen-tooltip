@@ -27,13 +27,9 @@
 </template>
 
 <script>
-// import Vue from 'vue'
-// import antd from 'ant-design-vue'
-// import 'ant-design-vue/dist/antd.css' // or 'ant-design-vue/dist/antd.less'
-// Vue.use(antd)
 
 import { Tooltip } from 'ant-design-vue'
-// import './style'
+import './style'
 
 export default {
   name: 'XiwenTooltip',
