@@ -41,13 +41,12 @@ export default {
       // 处理.css和.less文件
       extensions: ['.css', 'less']
     }),
-    resolve(),
-    // resolve({
-    //   mainFields: ['module', 'jsnext:main', 'main', 'browser'],
-    //   extensions: ['.vue']
-    // }),
+    resolve({
+      mainFields: ['module', 'jsnext:main', 'main', 'browser'],
+      extensions: ['.vue']
+    }),
     vue({
-      css: false
+      css: true // 如果为false打包错误  https://github.com/vuejs/rollup-plugin-vue/issues/207
     }),
     less({
       exclude: ''
@@ -71,7 +70,7 @@ export default {
   ],
   // 使用rollup打包，我们在自己的库中需要使用第三方库，例如lodash等，又不想在最终生成的打包文件中出现jquery。这个时候我们就需要使用external属性。比如我们使用了lodash，
   external: ['moment', 'ant-design-vue'], // 如果这样配置的话，在别的项目中使用时，如果项目没有使用ant-design-vue 将没有ui效果
-  // external: ['moment'],
+  // external: ['moment'], // 打包提示 'TreeNode' is not exported by node_modules\ant-design-vue\es\vc-tree\index.js,
   watch: {
     include: 'src/**'
   }
