@@ -4,7 +4,7 @@
 
 ### package.json
 
-修改name为你的组件名字
+修改 name 为你的组件名字
 
 ```json
 {
@@ -26,7 +26,7 @@ npm run build
 npm publish
 ```
 
-### demo
+### 查看 demo
 
 ```js
 npm run demo:dev

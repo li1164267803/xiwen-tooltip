@@ -8,7 +8,10 @@ const config = Object.assign({}, base, {
     exports: 'named',
     name: cname,
     file: file('min'),
-    format: 'iife'
+    format: 'iife',
+    globals: {
+      'ant-design-vue': 'antDesignVue'
+    }
   }
 })
 

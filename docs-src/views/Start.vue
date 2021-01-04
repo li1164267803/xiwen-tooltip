@@ -1,6 +1,9 @@
 <template>
   <div class="page-Start page">
     <section class="snippets">
+      <div class="box">
+        <XiwenTooltip title="十大高手的方123123123123123s23424435345345355555" />
+      </div>
       <div class="section-content">
         <CodeSnippet class="snippet" :code="mainSnippet" lang="js" />
       </div>
@@ -10,6 +13,8 @@
 
 <script>
 import CodeSnippet from '../components/CodeSnippet.vue'
+import { XiwenTooltip } from '../../dist/xiwen-tooltip.esm'
+
 import { config, upName } from '../config'
 
 const mainSnippet = `
@@ -28,7 +33,8 @@ new Vue({
 export default {
   name: 'Start',
   components: {
-    CodeSnippet
+    CodeSnippet,
+    XiwenTooltip
   },
   data() {
     return {
@@ -37,3 +43,11 @@ export default {
   }
 }
 </script>
+
+<style lang="less" >
+.box {
+  width: 200px;
+  height: 50px;
+  border: 1px solid #000;
+}
+</style>

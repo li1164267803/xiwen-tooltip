@@ -2,6 +2,7 @@
 build/
 docs/
 demo-src/
+docs-src/
 node_modules/
 public/
 tests/

@@ -24,15 +24,21 @@ import CodeSnippet from '../components/CodeSnippet.vue'
 import Collapse from '../components/Collapse.vue'
 
 const mainSnippet = `
-data () {
-  return {
-    msg: 'vue component'
+import {XiwenTooltip} from 'xiwen-tooltip';
+
+export default {
+  name: 'App',
+  components: {
+    XiwenTooltip
   }
 }
 `
 
 const componentSnippet = `
-<v-component :msg="msg" />
+// 外层容器一定要有宽带和高度
+<div class="box">
+  <XiwenTooltip  title="十大高手的方123123123123123s23424435345345355555"></XiwenTooltip>
+</div>
 `
 export default {
   name: 'Home',

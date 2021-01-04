@@ -29,7 +29,6 @@
 <script>
 
 import { Tooltip } from 'ant-design-vue'
-import './style'
 
 export default {
   name: 'XiwenTooltip',

@@ -1,7 +1,7 @@
 {
   "name": "xiwen-tooltip",
-  "version": "1.0.20",
-  "description": "用来简单的文字提示气泡，文字溢出时，鼠标滑上展示气泡，没有溢出，不展示气泡",
+  "version": "1.0.24",
+  "description": "文字提示气泡，文字溢出时，鼠标滑上展示气泡，没有溢出，不展示气泡",
   "keywords": [
     "tooltip",
     "antd",
