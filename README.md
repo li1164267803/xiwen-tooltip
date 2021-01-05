@@ -16,7 +16,7 @@
 
 ```js
 npm install
-npm run dev
+npm run dev // 实时编译
 ```
 
 ### 组件打包发布

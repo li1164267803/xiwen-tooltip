@@ -1,14 +1,11 @@
-import Component from './lib/component.vue'
 import XiwenTooltip from './lib/tooltip-antd/index.vue'
-import 'ant-design-vue/lib/tooltip/style/index.js'
 
+// 可以放入多个组件，一起抛出
 const components = [
-  Component,
   XiwenTooltip
 ]
 
 export {
-  Component,
   XiwenTooltip
 }
 

@@ -3,15 +3,21 @@
 > 该功能实现了文字过长时溢出裁切显示... 鼠标滑上使用 tooltip 显示全部内容  
 > 文字少时，没有裁切，鼠标滑上不显示 tooltip
 
-### 使用场景
-
 #### 在表格中使用
 
-实现改功能
+##### 效果展示
 
-例子
+![希文插件功能](https://img-blog.csdnimg.cn/20201210113319367.gif)
 
-```
+#### 在普通循环 list 中使用
+
+##### 效果展示
+
+![文字少时](https://img-blog.csdnimg.cn/20201210151224677.gif)
+
+###### 例子（本例子是基于 antd 做的，在 element-ui，或者是 iview 中，同样适用）
+
+```html
 <template>
   <a-table :columns="columns" :data-source="data">
     <a slot="name" slot-scope="text">{{ text }}</a>
@@ -25,14 +31,14 @@
 **具体的 antd-vue 中 tooltip api 配置请点击下面链接，查看官方文档**
 https://www.antdv.com/components/tooltip-cn/#API
 
-| 参数             | 说明               | 类型     | 默认值           |
-| ---------------- | ------------------ | -------- | ---------------- |
-| title            | 省市区 json        | _string_ | -                |
-| detail           | 初始值             | _object_ | -                |
-| btnText          | 按钮文本           | _string_ | -                |
-| cuttingNum       | 显示几行后开始裁切 | _Number_ | 2                |
-| placement        | 气泡框位置         | _string_ | rightTop         |
-| overlayClassName | 卡片类名           | _string_ | xiwen-preinstall |
+| 参数             | 说明                    | 类型     | 默认值           |
+| ---------------- | ----------------------- | -------- | ---------------- |
+| title            | 需要 Tooltip 显示的文本 | _string_ | -                |
+| detail           | 初始值                  | _object_ | -                |
+| btnText          | 按钮文本                | _string_ | -                |
+| cuttingNum       | 显示几行后开始裁切      | _Number_ | 2                |
+| placement        | 气泡框位置              | _string_ | rightTop         |
+| overlayClassName | 卡片类名                | _string_ | xiwen-preinstall |
 
 #### 注：
 
@@ -50,3 +56,5 @@ https://www.antdv.com/components/tooltip-cn/#API
   this.$refs.tooltip.visibleChange(callback);
 </script>
 ```
+
+### 如 demo 例子可下载代码 执行 npm run demo:dev

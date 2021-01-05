@@ -79,6 +79,9 @@ module.exports = {
     'no-dupe-class-members': 2,
     'no-dupe-keys': 2,
     'no-duplicate-case': 2,
+     // 允许catch出现空代码块 
+     // https://blog.csdn.net/cccccccccz/article/details/105253558
+    'no-empty': [2, { 'allowEmptyCatch': true }],
     'no-empty-character-class': 2,
     'no-empty-pattern': 2,
     'no-eval': 2,

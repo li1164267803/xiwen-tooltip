@@ -4,6 +4,7 @@ module.exports = {
       '@babel/env', {
         'modules': false
       }
+      // { loader: 'less-loader', options: { javascriptEnabled: true }}
     ]
     // [
     //   'import',

@@ -1,6 +1,6 @@
 {
   "name": "xiwen-tooltip",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "文字提示气泡，文字溢出时，鼠标滑上展示气泡，没有溢出，不展示气泡",
   "keywords": [
     "tooltip",
@@ -35,7 +35,7 @@
   "bugs": {
     "url": "https://github.com/li1164267803/xiwen-tooltip/issues"
   },
-  "homepage": "https://li1164267803.github.com/xiwen-tooltip",
+  "homepage": "https://github.com/li1164267803/xiwen-tooltip/blob/master/src/lib/tooltip-antd",
   "dependencies": {
     "ant-design-vue": "^1.7.2",
     "rollup-plugin-less": "^1.1.2",

@@ -4,6 +4,17 @@
       <div class="box">
         <XiwenTooltip title="十大高手的方123123123123123s23424435345345355555" />
       </div>
+      <div class="box">
+        <XiwenTooltip title="文字少不显示" />
+      </div>
+      <div class="box">
+        <XiwenTooltip>
+          <template slot="title">
+            使用slot的写法23123123123123s23424435345345355555
+          </template>
+          使用slot的写法23123123123123s23424435345345355555
+        </XiwenTooltip>
+      </div>
       <div class="section-content">
         <CodeSnippet class="snippet" :code="mainSnippet" lang="js" />
       </div>
@@ -21,7 +32,7 @@ const mainSnippet = `
 import Vue from 'vue'
 import App from './App.vue'
 import ${upName} from '${config.name}'
-import '${config.name}.css'
+// import '${config.name}.css'  不需要引入这个
 
 Vue.use(${upName})
 

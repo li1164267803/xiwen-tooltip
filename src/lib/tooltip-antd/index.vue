@@ -29,15 +29,14 @@
 <script>
 
 import { Tooltip } from 'ant-design-vue'
+import 'ant-design-vue/lib/tooltip/style/index.js'
 
 export default {
   name: 'XiwenTooltip',
   components: { Tooltip },
   props: {
-    title: {
-      type: String,
-      default: ''
-    },
+    // eslint-disable-next-line vue/require-default-prop
+    title: String, // 不能给默认值，否则contentText执行为空，或使用watch监听
     placement: {
       type: String,
       default: 'rightTop'
@@ -115,7 +114,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 .xiwen-preinstall {
   .ant-tooltip-inner {
     background-color: #fff;

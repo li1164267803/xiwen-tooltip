@@ -11,6 +11,7 @@
       <Collapse>
         <div class="section-content">
           <CodeSnippet class="snippet" :code="componentSnippet" lang="html" />
+          <CodeSnippet class="snippet" :code="componentSnippet2" lang="html" />
           <div class="plus">+</div>
           <CodeSnippet class="snippet" :code="mainSnippet" lang="js" />
         </div>
@@ -40,6 +41,15 @@ const componentSnippet = `
   <XiwenTooltip  title="十大高手的方123123123123123s23424435345345355555"></XiwenTooltip>
 </div>
 `
+const componentSnippet2 = `
+// 使用slot的写法
+<div class="box">
+  <XiwenTooltip>
+    <template slot="title">十大高手的方123123123123123s23424435345345355555</template>
+    使用slot的写法23123123123123s23424435345345355555
+  </XiwenTooltip>
+</div>
+`
 export default {
   name: 'Home',
   components: {
@@ -50,7 +60,8 @@ export default {
   data() {
     return {
       mainSnippet,
-      componentSnippet
+      componentSnippet,
+      componentSnippet2
     }
   }
 }
