@@ -6,7 +6,7 @@ import Start from './views/Start.vue'
 Vue.use(VueRouter)
 
 export const routes = [
-  { path: '/', name: 'Home', component: Home },
+  { path: '/', name: 'Dome', component: Home },
   { path: '/start', name: '上手', component: Start },
   { path: '*', redirect: '/' }
 ]

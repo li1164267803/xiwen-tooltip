@@ -3,12 +3,12 @@
     <header>
       <h1>{{ config.name }}</h1>
       <div class="command">npm install --save {{ config.name }}</div>
+      <div class="description">{{ config.description }}</div>
       <section class="nav">
         <router-link v-for="d in routes" :key="d.path" :to="d.path">{{ d.name }}</router-link>
         <a :href="`https://github.com/${config.author}/${config.name}#usage`" target="_blank">文档</a>
         <a @click="toggleFullscreen">切换全屏</a>
       </section>
-      <div class="description">{{ config.description }}</div>
     </header>
 
     <router-view />
@@ -62,6 +62,7 @@ header {
   .description {
     color: white;
     margin-top: 24px;
+    text-align: center;
   }
 }
 
